@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Input;
 
 public class FireLaserGun : MonoBehaviour
 {
@@ -11,12 +12,15 @@ public class FireLaserGun : MonoBehaviour
 
     public Transform laserParent;
 
-    public void FireLaser()
+    public void FireLaser(bool playAudio = true)
     {
-        gunAnimator.SetTrigger("Fire");        
+        if (gunAnimator != null) 
+            gunAnimator.SetTrigger("Fire");        
 
-        GetComponent<AudioSource>().Play();
-
+        
+        if (playAudio)
+            GetComponent<AudioSource>().Play();
+        
         // instantiate the laser beam
         GameObject generatedLaserBeam = Instantiate(laserBeamModel, laserSpawnPoint.position, laserSpawnPoint.rotation);
 

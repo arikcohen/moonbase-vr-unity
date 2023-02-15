@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaserBeamMove : MonoBehaviour
 {
-    public float thrust = 10f;
+    public float thrust = 0.01f;
     private Rigidbody rb;
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class LaserBeamMove : MonoBehaviour
     void Update()
     {
         rb.velocity = transform.forward * thrust;
-
+        Debug.Log(this.name + " moveLaser:" + transform.forward);
         Destroy(gameObject, 2f);
     }
 }

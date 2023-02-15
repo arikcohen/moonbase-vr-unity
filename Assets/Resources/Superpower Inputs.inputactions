@@ -1,0 +1,45 @@
+{
+    "name": "Superpower Inputs",
+    "maps": [
+        {
+            "name": "Superpowers",
+            "id": "8e1e5583-f9d1-442a-a5a9-b3b92fbc4204",
+            "actions": [
+                {
+                    "name": "FireEyes",
+                    "type": "Button",
+                    "id": "b5369a51-6d6a-41a2-b333-3a3d344ab2d9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "58a8d660-6a39-4e7c-b763-d1b55ff06a40",
+                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FireEyes",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "58173f1a-31a8-44c1-ab38-0d4b2385b8c8",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FireEyes",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

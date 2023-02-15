@@ -1,0 +1,120 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae5a46bda3295124c99b0e6537ac7252, type: 3}
+  m_Name: VoiceCommands
+  m_EditorClassIdentifier: 
+  _clientAccessToken: PA6AR4C2S7B5XKFYGA6MGLHLPYAE3UXI
+  _appInfo:
+    name: superman_eyes_vr
+    id: 1243861409843832
+    lang: en
+    isPrivate: 0
+    createdAt: 2023-02-09T14:22:56-0800
+    trainingStatus: 1
+    lastTrainDuration: 28
+    lastTrainedAt: 2023-02-13T21:35:57-0800
+    nextTrainAt: 2023-02-13T21:35:29-0800
+    intents:
+    - id: 1356909985062345
+      name: activate_power
+      entities:
+      - name: power:power
+        id: 1393622384801864
+    - id: 582152126903743
+      name: fire
+      entities:
+      - name: weapon:weapon
+        id: 1337408993652170
+    entities:
+    - name: power
+      id: 929830491349983
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: power
+        id: 1393622384801864
+      keywords:
+      - keyword: fire
+        synonyms:
+        - fire
+      - keyword: freeze
+        synonyms:
+        - freeze
+    - name: weapon
+      id: 733090201753573
+      lookups:
+      - free-text
+      - keywords
+      roles:
+      - name: weapon
+        id: 1337408993652170
+      keywords:
+      - keyword: fire
+        synonyms:
+        - fire
+    traits: []
+    voices:
+    - name: Charlie
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - fast
+      - projected
+    - name: Cooper
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Prospector
+      locale: en_US
+      gender: male
+      styles:
+      - default
+    - name: Rebecca
+      locale: en_US
+      gender: female
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+    - name: Vampire
+      locale: en_US
+      gender: male
+      styles:
+      - default
+      - soft
+      - formal
+      - fast
+      - projected
+  _configurationId: 09c82dca-d0b0-4c44-ae26-2aab3f15e40c
+  timeoutMS: 10000
+  endpointConfiguration:
+    uriScheme: 
+    authority: 
+    port: 0
+    witApiVersion: 
+    speech: 
+    message: 
+    dictation: 
+  isDemoOnly: 0
+  useConduit: 1
+  _manifestLocalPath: ConduitManifest-0a8f9c02-a7e1-4cd2-8b01-94f1e13db458.json
+  excludedAssemblies: []
