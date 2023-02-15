@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
      {
          onGameManagerStarted.Invoke();
      }
-     public  void Update()
+     public void Update()
     {
         if (state == GameState.Playing) {
             sliderTimerImage.fillAmount = (sliderDurationCurrentValue - Time.deltaTime / gameDuration);
