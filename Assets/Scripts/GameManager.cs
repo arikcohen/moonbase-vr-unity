@@ -20,6 +20,18 @@ public class GameManager : MonoBehaviour
         Standard,
         Hard
     }
+
+    public enum Superpowers
+    {
+        Freeze,
+        Fire
+    }
+
+    public static string [] SuperpowerStrings = { 
+        "Freeze", 
+        "Fire" 
+    };
+
     public delegate void AsteroidHandler();
     public static event AsteroidHandler AstroidDestroyed;
 
@@ -46,7 +58,9 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI difficultyText;
     public static GameState state = GameState.Intro;
-   
+
+    public static Superpowers currentSuperPower = Superpowers.Freeze;
+
      public void Start ()
      {
          onGameManagerStarted.Invoke();
@@ -82,6 +96,11 @@ public class GameManager : MonoBehaviour
             float asteroidBaseScore = (difficulty == GameDifficulty.Standard) ? 500f : 750f;
 
             asteroidScore = (int) ((1f + asteroidSpeedMultiplier /2) * astroidDistanceMulitplier * asteroidBaseScore);
+            
+            if (GameManager.currentSuperPower == Superpowers.Fire)
+            {
+                asteroidScore = asteroidScore / 3;
+            }
             
             PlayerScore += (int) asteroidScore;
             AstroidDestroyed(); 

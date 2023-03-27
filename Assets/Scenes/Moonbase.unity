@@ -3104,7 +3104,7 @@ SphereCollider:
   m_GameObject: {fileID: 849483089}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -3172,10 +3172,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Eye: 0
   ConfidenceThreshold: 0.5
-  ApplyPosition: 0
+  ApplyPosition: 1
   ApplyRotation: 1
   ReferenceFrame: {fileID: 0}
-  TrackingMode: 0
+  TrackingMode: 2
 --- !u!114 &849483095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3185,13 +3185,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 849483089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e49bfd1f70ab981468706b60a5bd53c6, type: 3}
+  m_Script: {fileID: 11500000, guid: be98861d81c487f4d90fe31740f3f848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunAnimator: {fileID: 0}
-  laserSpawnPoint: {fileID: 849483090}
-  laserBeamModel: {fileID: 4016273362745119833, guid: 2a774bf73511d8d4d98b5ad94886d63e, type: 3}
-  laserParent: {fileID: 137656835}
+  superpowerModel: {fileID: 4016273362745119833, guid: 2a774bf73511d8d4d98b5ad94886d63e, type: 3}
+  spawnPoint: {fileID: 849483090}
+  superpowerParent: {fileID: 137656835}
 --- !u!1 &867588753
 GameObject:
   m_ObjectHideFlags: 0
@@ -3613,7 +3612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8d744635d106440967e47773b331c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  superPower: Freeze
 --- !u!1 &958942431
 GameObject:
   m_ObjectHideFlags: 0
@@ -9813,9 +9811,9 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 849483095}
-        m_TargetAssemblyTypeName: FireLaserGun, Assembly-CSharp
-        m_MethodName: FireLaser
-        m_Mode: 6
+        m_TargetAssemblyTypeName: UseSuperpower, Assembly-CSharp
+        m_MethodName: ActivatePower
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9824,13 +9822,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2050104860}
-        m_TargetAssemblyTypeName: FireLaserGun, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 2050104866}
+        m_TargetAssemblyTypeName: UseSuperpower, Assembly-CSharp
+        m_MethodName: ActivatePower
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -13751,10 +13749,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Eye: 1
   ConfidenceThreshold: 0.5
-  ApplyPosition: 0
+  ApplyPosition: 1
   ApplyRotation: 1
   ReferenceFrame: {fileID: 0}
-  TrackingMode: 0
+  TrackingMode: 2
 --- !u!135 &2050104863
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13764,7 +13762,7 @@ SphereCollider:
   m_GameObject: {fileID: 2050104860}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -13827,13 +13825,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2050104860}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e49bfd1f70ab981468706b60a5bd53c6, type: 3}
+  m_Script: {fileID: 11500000, guid: be98861d81c487f4d90fe31740f3f848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunAnimator: {fileID: 0}
-  laserSpawnPoint: {fileID: 2050104861}
-  laserBeamModel: {fileID: 4016273362745119833, guid: 2a774bf73511d8d4d98b5ad94886d63e, type: 3}
-  laserParent: {fileID: 137656835}
+  superpowerModel: {fileID: 4016273362745119833, guid: 2a774bf73511d8d4d98b5ad94886d63e, type: 3}
+  spawnPoint: {fileID: 2050104861}
+  superpowerParent: {fileID: 137656835}
 --- !u!1001 &2061789149
 PrefabInstance:
   m_ObjectHideFlags: 0

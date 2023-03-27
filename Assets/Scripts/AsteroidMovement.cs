@@ -20,6 +20,7 @@ public class AsteroidMovement : MonoBehaviour
 
     private float asteroidSpeed;
     public float asteroidSpeedMultiplier;
+    private bool speedAdjusted = false;
     void Start()
     {
         // calculate asteroid speed -- speed is higher for higer game difficult
@@ -44,6 +45,16 @@ public class AsteroidMovement : MonoBehaviour
     {
         transform.Translate(direction * Time.deltaTime * asteroidSpeed);
         transform.GetChild(0).transform.Rotate(Vector3.up * Time.deltaTime * _rotationalSpeed);
+    }
+
+    // Slowdown speed on freeze ray
+    public void FreezeRaySpeedAdjustment()
+    {
+        if (!speedAdjusted)
+        {
+            asteroidSpeed *= 0.5f;
+            speedAdjusted = true;
+        }
     }
 }
 
